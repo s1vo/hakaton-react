@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 // 1. Определяем стили для обёртки навбара
 const StyledNavbar = styled.nav`
@@ -23,7 +23,7 @@ const Links = styled.ul`
   list-style: none;
   display: flex;
   gap: 1rem;
-  margin: 0;      /* Сбрасываем отступы по умолчанию */
+  margin: 0; /* Сбрасываем отступы по умолчанию */
   padding: 0;
 `;
 
@@ -36,25 +36,24 @@ const NavLink = styled(Link)`
   }
 `;
 
-export const  Navbar = () => {
-    return (
-        <StyledNavbar>
-            <Logo>Хакатон React</Logo>
-            <Links>
-                <li>
-                    <NavLink to="/">Главная</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/about">О нас</NavLink>
-                </li>
-                <li>
+export const Navbar = () => {
+  return (
+    <StyledNavbar>
+      <Logo>Хакатон React</Logo>
+      <Links>
+        <li>
+          <NavLink to="/">Главная</NavLink>
+        </li>
+        <li>
+          <NavLink to="/about">О нас</NavLink>
+        </li>
+        {/* <li>
                     <NavLink to="/participants">Участники</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/contacts">Контакты</NavLink>
-                </li>
-            </Links>
-        </StyledNavbar>
-    );
-}
-
+                </li> */}
+        <li>
+          <NavLink to="/contacts">Контакты</NavLink>
+        </li>
+      </Links>
+    </StyledNavbar>
+  );
+};
