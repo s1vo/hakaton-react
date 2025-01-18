@@ -1,5 +1,5 @@
 import AppRouter from './router/app-router';
-import { Footer, Navbar } from './components/layout/index'
+import { Footer, Navbar } from './shared/layout'
 
 const App = () => {
   return (

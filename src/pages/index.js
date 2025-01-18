@@ -1,3 +1,3 @@
-export * from './About/about'
-export * from './Home/home'
-export * from './Participants/participants'
+export * from "./home/homePages";
+export * from "./about/aboutPages";
+export * from "./participants/participantsPages";

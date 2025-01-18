@@ -1,9 +1,10 @@
 import React from 'react';
 
-export const Participants = () => {
+export const AboutPages = () => {
     return(
         <div>
-            <h2>Practicipants</h2>
+            <h2>About</h2>
         </div>
     )
 }
+
