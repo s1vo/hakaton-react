@@ -1,17 +1,28 @@
 import React from 'react';
-import { Expandable } from "../../shared/ui";
-
+import { TeamCard } from "../../components/ui";
+import  { HomeInfo} from "./components/homeInfo/homeInfo";
+import {ModalJoinUs} from "./components/modalJoinUs/modalJoinUs";
+import './homePages.css';
 
 export const HomePages = () => {
     return (
         <div className="home-page">
-            <h1>Главная страница</h1>
-            <p>Добро пожаловать!</p>
-            <Expandable label="Подробнее о проекте">
-                <p>Здесь находится скрытый текст, который открывается при нажатии на треугольник.</p>
-                <p>Можно добавить любые данные, например преимущества, цели и т.д.</p>
-            </Expandable>
+            <header className="home-header">
+                <div className="header-content">
+                    <h1>Хакатон React</h1>
+                    <p>
+                        Объединяем идеи, воплощаем технологии и создаём инновации, которые меняют мир.
+                        Вместе мы строим будущее цифровых решений.
+                    </p>
+                   <ModalJoinUs/>
+                </div>
+            </header>
+
+            <HomeInfo/>
+
+            <div className="team-cards">
+                <TeamCard/>
+            </div>
         </div>
     );
 };
-

@@ -1,0 +1,68 @@
+/* Стили для контейнера навбара */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1e293b;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 5px rgba(136, 136, 136, 0.54); /* Светлая граница снизу */
+}
+
+/* Логотип */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Текст логотипа */
+.navbar-logo-text {
+    font-size: 1.6rem;
+    color: #eaeaea; /* Темный текст */
+    font-weight: bold;
+}
+
+/* Список ссылок */
+.navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ссылка */
+.navbar-link {
+    position: relative; /* Необходима для псевдоэлемента */
+    text-decoration: none;
+    color: #eaeaea; /* Цвет текста */
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: color 0.3s; /* Плавное изменение цвета */
+}
+
+.navbar-link::after {
+    content: ''; /* Псевдоэлемент для подчеркивания */
+    position: absolute;
+    bottom: -3px; /* Расположение под текстом */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; /* Цвет подчеркивания */
+    transition: width 0.3s ease; /* Анимация */
+}
+
+.navbar-link:hover {
+    color: #ffffff; /* Изменение цвета текста */
+}
+
+.navbar-link:hover::after {
+    width: 100%; /* Подчеркивание растягивается на всю ширину */
+}
+
+/* Активная ссылка */
+.navbar-link.active {
+    color: #ffffff; /* Акцентный цвет для активной ссылки */
+    font-weight: bold; /* Дополнительное выделение */
+    border-bottom: 3px solid #ffffff; /* Подчёркивание */
+}

@@ -1,60 +1,54 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { NavLink } from 'react-router-dom'; // Используем NavLink вместо Link
+import './navbar.css';
+import logo from '../../../assets/images/logo.svg';
 
-// 1. Определяем стили для обёртки навбара
-const StyledNavbar = styled.nav`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #2196f3;
-  padding: 0.5rem 1rem;
-`;
-
-// 2. Логотип
-const Logo = styled.div`
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.2rem;
-`;
-
-// 3. Список ссылок
-const Links = styled.ul`
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  margin: 0;      /* Сбрасываем отступы по умолчанию */
-  padding: 0;
-`;
-
-// 4. Ссылка (обёртка Link из react-router-dom)
-const NavLink = styled(Link)`
-  color: #fff;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
-export const  Navbar = () => {
+export const Navbar = () => {
     return (
-        <StyledNavbar>
-            <Logo>Хакатон React</Logo>
-            <Links>
+        <nav className="navbar">
+            <div className="navbar-logo">
+                <img src={logo} alt="Логотип" width="45" height="45" />
+                <span className="navbar-logo-text">Хакатон React</span>
+            </div>
+            <ul className="navbar-links">
                 <li>
-                    <NavLink to="/">Главная</NavLink>
+                    <NavLink
+                        className="navbar-link"
+                        to="/"
+                        exact
+                        activeClassName="active"
+                    >
+                        Главная
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/about">О нас</NavLink>
+                    <NavLink
+                        className="navbar-link"
+                        to="/about"
+                        activeClassName="active"
+                    >
+                        О нас
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/participants">Участники</NavLink>
+                    <NavLink
+                        className="navbar-link"
+                        to="/participants"
+                        activeClassName="active"
+                    >
+                        Участники
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/contacts">Контакты</NavLink>
+                    <NavLink
+                        className="navbar-link"
+                        to="/contacts"
+                        activeClassName="active"
+                    >
+                        Контакты
+                    </NavLink>
                 </li>
-            </Links>
-        </StyledNavbar>
+            </ul>
+        </nav>
     );
-}
-
+};

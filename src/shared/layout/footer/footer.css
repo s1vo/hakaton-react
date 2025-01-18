@@ -1,0 +1,43 @@
+footer {
+    background-color: #1e293b;
+    color: #ffffff;
+    text-align: center;
+    position: relative; /* Для правильного отображения */
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Внутренний контент футера */
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin: 0 30px;
+}
+
+/* Анимация для текста */
+.footer-content p {
+
+    font-size: 1.4rem;
+    animation: fadeIn 1s ease-in-out;
+    color: #fffff;
+}
+
+/* Отступ перед футером */
+footer::before {
+    content: '';
+    display: block;
+    height: 2rem; /* Высота отступа между футером и контентом */
+}
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
