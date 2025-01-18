@@ -1,7 +1,8 @@
 import React from 'react';
-import {Expandable } from '../../components/common/';
+import { Expandable } from "../../shared/ui";
 
-export const  Home = () => {
+
+export const HomePages = () => {
     return (
         <div className="home-page">
             <h1>Главная страница</h1>
@@ -12,4 +13,5 @@ export const  Home = () => {
             </Expandable>
         </div>
     );
-}
+};
+

@@ -1,0 +1,25 @@
+.expandable-container {
+    margin: 1rem 0;
+}
+
+.triangle {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    transition: transform 0.3s;
+}
+
+/* Поворот, если элемент открыт */
+.triangle.open {
+    transform: rotate(90deg);
+}
+
+.expandable-label {
+    font-weight: bold;
+}
+
+.expandable-text {
+    margin-left: 1.5rem; /* Сдвиг текста после треугольника */
+    padding: 0.5rem;
+    border-left: 2px solid #ccc;
+}

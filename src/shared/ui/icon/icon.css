@@ -1,0 +1,19 @@
+.icon-container {
+    /* Базовые стили */
+    color: black;
+}
+
+/* Если иконка отключена (disabled) */
+.icon-container.disabled {
+    color: grey;
+}
+
+/* Ховер-эффект */
+.icon-container:hover {
+    cursor: pointer;
+}
+
+/* Если иконка неактивна (inactive) – отключим курсор при ховере */
+.icon-container.inactive:hover {
+    cursor: default;
+}

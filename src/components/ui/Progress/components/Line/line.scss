@@ -1,0 +1,17 @@
+.line {
+  &__container {
+    height: 20px;
+    width: 100%;
+    border-radius: 50px;
+  }
+  &__progress {
+    height: 100%;
+    border-radius: inherit;
+    text-align: right;
+  }
+  &__value {
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+  }
+}
