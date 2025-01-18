@@ -1,24 +1,24 @@
 import React from "react";
 import { ProgressBar } from "../../../src/components/ui";
+const progressData = [
+  {
+    label: "HTML",
+    value: 25,
+    color: "red",
+  },
+  {
+    label: "JavaScript",
+    value: 50,
+    color: "orange",
+  },
+  {
+    label: "CSS",
+    value: 30,
+    color: "blue",
+  },
+];
 
 export const Participants = () => {
-  const progressData = [
-    {
-      label: "HTML",
-      value: 25,
-      color: "red",
-    },
-    {
-      label: "JavaScript",
-      value: 50,
-      color: "orange",
-    },
-    {
-      label: "CSS",
-      value: 30,
-      color: "blue",
-    },
-  ];
   return (
     <div>
       <h2>Practicipants</h2>
