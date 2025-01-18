@@ -15,8 +15,12 @@ const ProgressBarLayout = ({ children, setSelectType }) => (
       <option className="progressBar__option" value={"line"}>
         Line
       </option>
-      <option value={"pie"}>Pie</option>
-      <option value={"polar"}>Polar</option>
+      <option className="progressBar__option" value={"pie"}>
+        Pie
+      </option>
+      <option className="progressBar__option" value={"polar"}>
+        Polar
+      </option>
     </select>
     {children}
   </div>
