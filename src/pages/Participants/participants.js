@@ -23,7 +23,6 @@ export const Participants = () => {
     <div>
       <h2>Practicipants</h2>
       <div className="progressBar">
-        {" "}
         <ProgressBar type={"polar"} props={progressData} />
       </div>
     </div>
