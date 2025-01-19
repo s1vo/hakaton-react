@@ -1,0 +1,71 @@
+/* Стили для контейнера навбара */
+.navbar {
+
+  top: 0;
+  left: 0;
+  width: 100%; /* Растягиваем шапку на всю ширину */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1e293b;
+  padding: 0.5rem 1rem;
+  z-index: 1000; /* Чтобы шапка была поверх всего контента */
+}
+
+/* Логотип */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Текст логотипа */
+.navbar-logo-text {
+  font-size: 1.6rem;
+  color: #eaeaea; /* Темный текст */
+  font-weight: bold;
+}
+
+/* Список ссылок */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin-right: 50px;
+}
+
+/* Ссылка */
+.navbar-link {
+  position: relative;
+  text-decoration: none;
+  color: #eaeaea;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #ffffff;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+/* Активная ссылка */
+.navbar-link.active {
+  color: #ffffff;
+  font-weight: bold;
+  border-bottom: 3px solid #ffffff;
+}

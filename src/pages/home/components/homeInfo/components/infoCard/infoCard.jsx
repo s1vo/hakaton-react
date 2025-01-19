@@ -7,7 +7,7 @@ import {
     faShieldAlt,
     faMagic,
 } from "@fortawesome/free-solid-svg-icons";
-import "./infoCard.css";
+import "./infoCard.scss";
 
 // Данные для карточек
 const cardsData = [

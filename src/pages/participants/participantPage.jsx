@@ -7,7 +7,6 @@ export const ParticipantPage = () => {
 
   return (
     <div>
-      <Wallpaper />
       <UserInfo userId={id} />
     </div>
   );

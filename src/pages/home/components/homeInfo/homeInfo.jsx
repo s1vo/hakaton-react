@@ -1,7 +1,9 @@
 import React from 'react';
 import {InfoCard} from "./components/infoCard/infoCard";
 
-import './homeInfo.css'
+import './homeInfo.scss'
+import {Expandable} from "../../../../shared/ui";
+
 
 export const HomeInfo = () => {
     return (
@@ -24,6 +26,18 @@ export const HomeInfo = () => {
             </p>
             <h2>Почему выбирают нас</h2>
             <InfoCard/>
+
+            <Expandable label="Интересный факт о разработке React">
+                <p>
+                    <span className="highlight">Интересный факт</span> о React: он был впервые представлен в 2013 году и
+                    стал <strong>революцией</strong> в разработке интерфейсов. Его концепция виртуального DOM и
+                    использование JSX
+                    изначально вызвали скептицизм, но сегодня React стал стандартом для создания современных
+                    веб-приложений,
+                    <span className="highlight">меняя подход</span> к разработке интерфейсов во всем мире.
+                </p>
+
+            </Expandable>
         </section>
     )
 };

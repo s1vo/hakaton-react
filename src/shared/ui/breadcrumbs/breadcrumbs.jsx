@@ -1,11 +1,12 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { teamMembers } from "../../../DB/members";
+import "./breadcrumbs.scss"; // Подключаем SCSS файл
 
 const routeNames = {
     "/": "Главная",
-    "/about": "О нас",
-    "/participant": "Участник",
+    "/team": "Команда",
+    "/favourites": "Избранное",
     "*": "Страница не найдена",
 };
 
@@ -18,20 +19,20 @@ export const Breadcrumbs = () => {
     }
 
     return (
-        <nav aria-label="breadcrumb" style={{ padding: "10px 20px", fontSize: "16px" }}>
-            <ol style={{ display: "flex", listStyle: "none", padding: 0, margin: 0 }}>
-                <li style={{ marginRight: "8px" }}>
-                    <Link to="/" style={{ textDecoration: "none", color: "#007bff" }}>
+        <nav aria-label="breadcrumb" className="breadcrumb">
+            <ol className="breadcrumb__list">
+                <li className="breadcrumb__item">
+                    <Link to="/" className="breadcrumb__link">
                         {routeNames["/"]}
                     </Link>
-                    {pathnames.length > 0 && <span style={{ margin: "0 5px" }}>/</span>}
+                    {pathnames.length > 0 && <span className="breadcrumb__divider">/</span>}
                 </li>
                 {pathnames.map((value, index) => {
                     const to = `/${pathnames.slice(0, index + 1).join("/")}`;
                     const isLast = index === pathnames.length - 1;
 
                     let name = routeNames[`/${value}`] || routeNames["*"];
-                    if (to.includes("/participant")) {
+                    if (to.includes("/team")) {
                         const memberId = Number(value);
                         const member = teamMembers.find((member) => member.id === memberId);
                         if (member) {
@@ -40,15 +41,15 @@ export const Breadcrumbs = () => {
                     }
 
                     return (
-                        <li key={to} style={{ marginRight: "8px" }}>
+                        <li key={to} className="breadcrumb__item">
                             {isLast ? (
-                                <span style={{ fontWeight: "bold", color: "#333" }}>{name}</span>
+                                <span className="breadcrumb__current">{name}</span>
                             ) : (
                                 <>
-                                    <Link to={to} style={{ textDecoration: "none", color: "#007bff" }}>
+                                    <Link to={to} className="breadcrumb__link">
                                         {name}
                                     </Link>
-                                    <span style={{ margin: "0 5px" }}>/</span>
+                                    <span className="breadcrumb__divider">/</span>
                                 </>
                             )}
                         </li>

@@ -2,7 +2,7 @@ import React from "react";
 import { TeamCard } from "../../components/ui";
 import { HomeInfo } from "./components/homeInfo/homeInfo";
 import { ModalJoinUs } from "./components/modalJoinUs/modalJoinUs";
-import "./homePages.css";
+import "./homePages.scss";
 
 export const HomePages = () => {
   return (

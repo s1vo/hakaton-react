@@ -4,9 +4,9 @@ import { Body, Footer, Navbar } from "./shared/layout";
 const App = () => {
   return (
     <div className="App">
-      <Navbar />
+        <Navbar />
         <AppRouter />
-      <Footer />
+        <Footer />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './icon.css';
+import './icon.scss';
 
 export const Icon = ({
                          icon, // Теперь принимаем объект иконки

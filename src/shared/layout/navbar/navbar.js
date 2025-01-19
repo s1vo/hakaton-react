@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom"; // Используем NavLink вместо Link
 import logo from "../../../assets/images/logo.svg";
-import "./navbar.css";
+import "./navbar.scss";
 
 export const Navbar = () => {
   return (
@@ -21,12 +21,7 @@ export const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink className="navbar-link" to="/about" activeClassName="active">
-            О нас
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className="navbar-link" to="/participants" activeClassName="active">
+          <NavLink className="navbar-link" to="/team" activeClassName="active">
             Участники
           </NavLink>
         </li>
