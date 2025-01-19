@@ -1,7 +1,4 @@
 .userImgContainer {
-  position: absolute;
-  top: 80px;
-  //   left: 15px;
   background-color: #55a1fe;
   padding: 10px 100px 180px 100px;
 }
@@ -31,4 +28,9 @@
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
+
+  & a {
+    color: white;
+    text-decoration: none;
+  }
 }

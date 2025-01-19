@@ -1,7 +1,8 @@
+
 import React, { useState } from "react";
-import photoMisha from "../../../assets/images/avatars/misha.jpg";
-import photoRuslan from "../../../assets/images/avatars/ruslan.jpg";
-import photoNikita from "../../../assets/images/avatars/nikita.jpg";
+import { useNavigate } from "react-router-dom";
+import { teamMembers } from "../../../DB/members";
+import { Button } from "../../../shared/ui";
 import { CheckBox } from "../../../shared/ui";
 import "./teamCard.css";
 
@@ -42,9 +43,9 @@ const getFormattedData = (isFavourites) => {
 };
 
 export const TeamCard = ({ isFavourites = false, isFavouritesView = true }) => {
+  const navigate = useNavigate();
   const [isFavouriteState, setIsFavouriteState] = useState(isFavourites);
   let teamData = getFormattedData(isFavouriteState);
-
   return (
     <section className="team">
       <h2 className="team-title">Наша команда</h2>
@@ -56,7 +57,12 @@ export const TeamCard = ({ isFavourites = false, isFavouritesView = true }) => {
             <h3 className="team-name">{member.name}</h3>
             <p className="team-role">{member.role}</p>
             <p className="team-description">{member.description}</p>
-            <button className="team-button">Подробнее</button>
+            <Button
+              color="#2563eb"
+              func={() => navigate(`/participant/${member.id}`)}
+              title="Подробнее"
+              type="circle"
+            />
           </div>
         ))}
       </div>

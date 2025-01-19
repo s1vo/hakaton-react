@@ -3,6 +3,10 @@ import { ReactComponent as FavouritesIcon } from "../../icons/reshot-icon-heart-
 import styles from "./user-info.module.scss";
 import { ProgressBar } from "../../../../components/ui";
 import { useParams } from "react-router-dom";
+import { UserImage } from "../user-image-container/user-imgae-container";
+import { teamMembers } from "../../../../DB/members";
+import { ProgressBarContainer } from "../../../../shared/ui/progress/progress";
+import { progressData } from "../../constants/progress";
 
 const progressData = [
   {
@@ -22,7 +26,7 @@ const progressData = [
   },
 ];
 
-export const UserInfo = () => {
+export const UserInfo = ({ userId }) => {
   const [isFavourite, setIsFavourite] = useState(false);
   const [favouriteItems, setFavouriteItems] = useState([]);
   const { id } = useParams();
@@ -52,20 +56,21 @@ export const UserInfo = () => {
   }, []);
   return (
     <div className={styles.infoContainer}>
+      <UserImage userId={userId} teamMembers={teamMembers} />
       <div className={styles.aboutMeContainer}>
         <div>
-          <h1>О себе</h1>
-          <div>Нормальный тип</div>
+          <h1>Задачи на проекте</h1>
+          <div>{teamMembers[userId].role}</div>
         </div>
         <div>
-          <h1>Задачи на проекте</h1>
-          <div>Всякая хуйня</div>
+          <h1>О себе</h1>
+          <div>{teamMembers[userId].description}</div>
         </div>
       </div>
       <div className={styles.progressBarContainer}>
         <h1>Уровень навыков</h1>
         <div className="progressBar">
-          <ProgressBar type={"polar"} props={progressData} />
+          <ProgressBarContainer type={"polar"} props={progressData} />
         </div>
       </div>
       <div>
