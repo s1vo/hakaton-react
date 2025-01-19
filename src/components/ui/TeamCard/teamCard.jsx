@@ -41,14 +41,14 @@ const getFormattedData = (isFavourites) => {
   return teamMembers.filter((i) => items.includes(String(i.id)));
 };
 
-export const TeamCard = ({ isFavourites = false }) => {
+export const TeamCard = ({ isFavourites = false, isFavouritesView = true }) => {
   const [isFavouriteState, setIsFavouriteState] = useState(isFavourites);
   let teamData = getFormattedData(isFavouriteState);
 
   return (
     <section className="team">
       <h2 className="team-title">Наша команда</h2>
-      <CheckBox onClick={() => setIsFavouriteState((prevState) => !prevState)} />
+      {isFavouritesView && <CheckBox onClick={() => setIsFavouriteState((prevState) => !prevState)} />}
       <div className="team-container">
         {teamData.map((member) => (
           <div key={member.id} className="team-card">
