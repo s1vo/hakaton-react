@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { ReactComponent as FavouritesIcon } from "../../icons/reshot-icon-heart-blank-QGHC54V7P8.svg";
 import styles from "./user-info.module.scss";
-import {ProgressBar} from "../../../../components/ui";
-
+import { ProgressBar } from "../../../../components/ui";
+import { useParams } from "react-router-dom";
 
 const progressData = [
   {
@@ -22,6 +23,25 @@ const progressData = [
 ];
 
 export const UserInfo = () => {
+  const [isFavourite, setIsFavourite] = useState(false);
+  const [favouriteItems, setFavouriteItems] = useState({});
+  const { id } = useParams();
+  const onFavouriteClick = () => {
+    if (!favouriteItems) {
+      localStorage.setItem("favouriteItems", JSON.stringify({ [id]: !isFavourite }));
+    } else {
+      localStorage.setItem("favouriteItems", JSON.stringify({ ...favouriteItems, [id]: !isFavourite }));
+    }
+
+    setIsFavourite((prevState) => !prevState);
+  };
+  useEffect(() => {
+    let items = localStorage.getItem("favouriteItems");
+    if (!items) return;
+    items = JSON.parse(items);
+    setFavouriteItems(items);
+    setIsFavourite(items[id]);
+  }, []);
   return (
     <div className={styles.infoContainer}>
       <div className={styles.aboutMeContainer}>
@@ -39,6 +59,12 @@ export const UserInfo = () => {
         <div className="progressBar">
           <ProgressBar type={"polar"} props={progressData} />
         </div>
+      </div>
+      <div>
+        <FavouritesIcon
+          className={styles.favouritesIcon + ` ${isFavourite ? styles.favourite : ""}`}
+          onClick={onFavouriteClick}
+        />
       </div>
     </div>
   );
