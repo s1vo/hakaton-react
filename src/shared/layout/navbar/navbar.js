@@ -31,6 +31,11 @@ export const Navbar = () => {
           </NavLink>
         </li>
         <li>
+          <NavLink className="navbar-link" to="/favourites" activeClassName="active">
+            Избранное
+          </NavLink>
+        </li>
+        <li>
           <NavLink className="navbar-link" to="/contacts" activeClassName="active">
             Контакты
           </NavLink>

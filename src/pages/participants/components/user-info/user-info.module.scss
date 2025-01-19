@@ -15,3 +15,17 @@
   margin-right: 0px;
   align-items: center;
 }
+.favouritesIcon {
+  width: 80px;
+  > g {
+    fill: rgb(196, 196, 196);
+  }
+  > g {
+    cursor: pointer;
+  }
+}
+.favourite {
+  > g {
+    fill: black;
+  }
+}
