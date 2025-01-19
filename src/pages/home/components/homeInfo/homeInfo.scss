@@ -14,7 +14,7 @@
 
 /* Заголовки в секции */
 .home-info h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #2563eb;
     margin-bottom: 1.5rem;
     display: flex;
@@ -25,8 +25,8 @@
 }
 
 /* Стили для текста */
-home-info p {
-    font-size: 1.1rem;
+.home-info p {
+    font-size: 1rem;
     line-height: 1.8;
     color: #475569;
     text-align: justify;

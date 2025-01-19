@@ -5,37 +5,39 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: "Nunito";
-  background-color: #f8fafc; /* Светлый фон */
-  color: #1e293b; /* Основной текст */
+  background-color: #f8fafc;
+  color: #1e293b;
   line-height: 1.6;
   height: 100%;
-  overflow-y: auto; /* Разрешаем вертикальную прокрутку */
-  overflow-x: hidden; /* Запрещаем горизонтальную прокрутку */
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #1e293b #e2e8f0;
 }
 
 /* Стилизация полосы прокрутки */
 body::-webkit-scrollbar {
-  width: 8px; /* Ширина полосы прокрутки */
-  background-color: #f1f5f9; /* Фон области скроллбара */
+  width: 8px;
+  background-color: #f1f5f9;
+  font-size: 1em;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #1e293b; /* Основной цвет полосы прокрутки */
-  border-radius: 4px; /* Скругление для красоты */
-  transition: background-color 0.3s ease; /* Плавное изменение цвета */
+  background-color: #1e293b;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background-color: #3b82f6; /* Цвет полосы при наведении */
+  background-color: #3b82f6;
 }
 
 body::-webkit-scrollbar-track {
-  background-color: #e2e8f0; /* Фон трека (дорожки) */
+  background-color: #e2e8f0;
 }
 
 /* Для Firefox (минималистичный вариант) */
 body {
-  scrollbar-width: thin; /* Уменьшаем ширину */
-  scrollbar-color: #1e293b #e2e8f0; /* Цвет: ползунок и трек */
+
 }
 
