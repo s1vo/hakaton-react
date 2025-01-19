@@ -1,0 +1,136 @@
+.infoContainer {
+  width: 100%;
+  padding: 40px;
+  background: linear-gradient(135deg, #0a5bdb, #1c88ff);
+  border-radius: 20px;
+}
+
+.userCard {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative; /* Для правильного позиционирования кнопки избранного */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.userImageContainer {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Равномерное распределение по высоте */
+  text-align: center;
+  background: #eaf4ff;
+  padding: 25px;
+  border-radius: 15px;
+  position: relative; /* Для кнопки избранного */
+
+
+  img {
+    width: 320px;
+    height: 320px;
+    border-radius: 10%;
+    border: 4px solid #ffffff;
+  }
+
+  .userInfo {
+    margin-top: 10px;
+    div {
+      margin-bottom: 8px;
+
+      font-weight: 500;
+      color: #1a1a1a;
+    }
+  }
+
+  .userLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    font-size: 1.3em;
+    margin-top: auto; /* Прижимаем к нижней части блока */
+
+    a {
+      display: inline-block;
+      color: #007bff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.favouritesIcon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff; /* Полный цвет фона */
+  color: #ffffff; /* Цвет иконки */
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: #ffffff; /* Более темный оттенок при наведении */
+  }
+
+  &.favourite {
+    background-color: #ff4757; /* Красный цвет при добавлении в избранное */
+  }
+}
+
+.detailsContainer {
+  flex: 2 1 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .section {
+    background: #fafafa;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #1a1a1a;
+      font-weight: 700;
+    }
+
+    p,
+    ul {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #495057;
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: 20px;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

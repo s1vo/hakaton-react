@@ -1,0 +1,145 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Хедер */
+.home-header {
+    background: linear-gradient(145deg, #1e293b, #2563eb); /* Тёмно-синий с переходом в насыщенный синий */
+    color: #ffffff;
+    text-align: center;
+    padding: 4rem 2rem;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.header-content {
+    text-align: center;
+    color: #ffffff;
+    padding: 2rem;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    color: #d1d5db; /* Светло-серый оттенок для текста */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1d4ed8; /* Более насыщенный синий */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Секция команды */
+.home-team {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8fafc; /* Светлый фон */
+}
+
+.home-team h2 {
+    font-size: 2rem;
+    color: #2563eb;
+    margin-bottom: 2rem;
+}
+
+.team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    background: linear-gradient(145deg, #1e3a8a, #2563eb); /* Градиентный фон */
+}
+
+/* Карточка участника */
+.team-card {
+    background-color: #ffffff; /* Белый фон */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.team-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid #2563eb; /* Насыщенный синий */
+}
+
+.team-card h3 {
+    font-size: 1.5rem;
+    color: #2563eb;
+    margin: 0.5rem 0;
+}
+
+.team-card p.role {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.team-card p.description {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.team-card button {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.team-card button:hover {
+    background-color: #0ea5e9;
+    transform: translateY(-2px);
+}
+
+

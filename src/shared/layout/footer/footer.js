@@ -1,19 +1,23 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState, useEffect } from 'react';
+import './footer.scss';
 
-// Создаём стилизованный компонент "footer"
-const StyledFooter = styled.footer`
-  text-align: center;
-  padding: 1rem;
-  background-color: #eeeeee;
-  margin-top: 2rem;
-`;
+export const Footer = () => {
+    const [time, setTime] = useState(new Date());
 
-export const Footer =() => {
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTime(new Date());
+        }, 1000);
+
+        return () => clearInterval(timer); // Очищаем таймер при размонтировании
+    }, []);
+
     return (
-        <StyledFooter>
-            <p>© 2025 Хакатон React. Все права защищены.</p>
-        </StyledFooter>
+        <footer className="footer">
+            <div className="footer-content">
+                <p>© 2025 Хакатон React. Все права защищены.</p>
+                <p>Текущее время: {time.toLocaleTimeString()}</p>
+            </div>
+        </footer>
     );
-}
-
+};

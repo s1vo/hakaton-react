@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './icon.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './icon.scss';
 
 export const Icon = ({
-                  id,
-                  inactive = false,
-                  disabled = false,
-                  size = '24px',
-                  margin = '0',
-                  padding = '0',
-                  ...props
-              }) => {
+                         icon, // Теперь принимаем объект иконки
+                         inactive = false,
+                         disabled = false,
+                         size = '24px',
+                         margin = '0',
+                         padding = '0',
+                         ...props
+                     }) => {
     // Собираем классы в зависимости от пропсов
     const containerClass = `
     icon-container
@@ -31,18 +32,16 @@ export const Icon = ({
             style={containerStyle}
             {...props}
         >
-            <i className={`fa ${id}`} aria-hidden="true" />
+            <FontAwesomeIcon icon={icon} />
         </div>
     );
 };
 
 Icon.propTypes = {
-    id: PropTypes.string.isRequired,
+    icon: PropTypes.object.isRequired, // Теперь icon — объект
     inactive: PropTypes.bool,
     disabled: PropTypes.bool,
     size: PropTypes.string,
     margin: PropTypes.string,
     padding: PropTypes.string,
 };
-
-

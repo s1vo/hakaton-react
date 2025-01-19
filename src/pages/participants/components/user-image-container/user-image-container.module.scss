@@ -1,0 +1,36 @@
+.userImgContainer {
+  background-color: #55a1fe;
+  padding: 10px 100px 180px 100px;
+}
+
+.userImg {
+  width: 250px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 999;
+}
+
+.personalData {
+  text-align: center;
+  color: white;
+
+  & > ul {
+    list-style: none;
+    padding: 0;
+
+    & h3 {
+      margin-top: 30px;
+    }
+  }
+}
+
+.socialMediaContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+
+  & a {
+    color: white;
+    text-decoration: none;
+  }
+}

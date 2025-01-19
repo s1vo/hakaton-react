@@ -1,0 +1,46 @@
+html,
+body {
+    height: 100%; /* Задаем высоту для всего документа */
+    margin: 0;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Высота страницы на весь экран */
+}
+
+footer {
+    background-color: #1e293b;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    margin-top: auto; /* Футер прижат к низу страницы */
+
+    /* Анимация для текста */
+    .footer-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        margin: 0 30px;
+
+        p {
+            font-size: 1.4rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+    }
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
