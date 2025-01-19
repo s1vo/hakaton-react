@@ -10,6 +10,7 @@ const AppRouter =() => {
             <Breadcrumbs />
             <Routes>
                 <Route path="/" element={<HomePages />} />
+                <Route path="/hakaton-react" element={<HomePages />} />
                 <Route path="/team" element={<TeamPage />} />
                 <Route path="/team/:id" element={<ParticipantPage />} />
                 <Route path="/favourites" element={<Favourites />} />
