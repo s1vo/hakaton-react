@@ -1,30 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { ReactComponent as FavouritesIcon } from "../../icons/reshot-icon-heart-blank-QGHC54V7P8.svg";
-import styles from "./user-info.module.scss";
-import { ProgressBar } from "../../../../components/ui";
 import { useParams } from "react-router-dom";
 import { UserImage } from "../user-image-container/user-imgae-container";
 import { teamMembers } from "../../../../DB/members";
 import { ProgressBarContainer } from "../../../../shared/ui/progress/progress";
 import { progressData } from "../../constants/progress";
-
-const progressData = [
-  {
-    label: "HTML",
-    value: 25,
-    color: "red",
-  },
-  {
-    label: "JavaScript",
-    value: 50,
-    color: "orange",
-  },
-  {
-    label: "CSS",
-    value: 30,
-    color: "blue",
-  },
-];
+import styles from "./user-info.module.scss";
 
 export const UserInfo = ({ userId }) => {
   const [isFavourite, setIsFavourite] = useState(false);
