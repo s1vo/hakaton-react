@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/hakaton-react/static/css/main.bce2f001.css",
-    "main.js": "/hakaton-react/static/js/main.c12f924a.js",
+    "main.js": "/hakaton-react/static/js/main.76be08d1.js",
     "static/media/photo-1542396601-dca920ea2807.avif": "/hakaton-react/static/media/photo-1542396601-dca920ea2807.a1f133b0add8c90c297d.avif",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/hakaton-react/static/media/fontawesome-webfont.6878d55e3615ccf40c38.svg",
     "static/media/404.jpg": "/hakaton-react/static/media/404.2f8c7cd5d940c8edf0bc.jpg",
@@ -17,10 +17,10 @@
     "static/media/reshot-icon-heart-blank-QGHC54V7P8.svg": "/hakaton-react/static/media/reshot-icon-heart-blank-QGHC54V7P8.9ba79c42385352ae054488032cc6c703.svg",
     "index.html": "/hakaton-react/index.html",
     "main.bce2f001.css.map": "/hakaton-react/static/css/main.bce2f001.css.map",
-    "main.c12f924a.js.map": "/hakaton-react/static/js/main.c12f924a.js.map"
+    "main.76be08d1.js.map": "/hakaton-react/static/js/main.76be08d1.js.map"
   },
   "entrypoints": [
     "static/css/main.bce2f001.css",
-    "static/js/main.c12f924a.js"
+    "static/js/main.76be08d1.js"
   ]
 }
