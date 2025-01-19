@@ -38,7 +38,7 @@ export const TeamCard = ({ isFavourites = false, isFavouritesView = true }) => {
             </div>
           ))
         ) : (
-          <div className="team-not-found">Страница избранного пустует...</div>
+          <div className="team-not-found">Избранное отсутствует...</div>
         )}
       </div>
     </section>
