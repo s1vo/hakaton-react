@@ -1,15 +1,14 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { Wallpaper, UserImage, UserInfo } from "./components";
+import { Wallpaper, UserInfo } from "./components";
 
 export const ParticipantPage = () => {
-  // const { id } = useParams();
+  const { id } = useParams();
 
   return (
     <div>
       <Wallpaper />
-      <UserImage />
-      <UserInfo />
+      <UserInfo userId={id} />
     </div>
   );
 };
