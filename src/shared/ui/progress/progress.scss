@@ -1,0 +1,10 @@
+.progressBar {
+  width: 500px;
+  &__selector {
+    cursor: pointer;
+    width: 150px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 6px;
+  }
+}
