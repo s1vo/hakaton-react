@@ -1,6 +1,6 @@
 import React from 'react';
 import {  Routes, Route } from 'react-router-dom';
-import {  HomePages, AboutPages, ParticipantsPages } from '../pages';
+import { HomePages, AboutPages, ParticipantPage, NotFound } from "../pages";
 
 
 const AppRouter =() => {
@@ -9,6 +9,8 @@ const AppRouter =() => {
             <Route path="/" element={<HomePages />} />
             <Route path="/about" element={ <AboutPages/>} />
             <Route path="/participants" element={ <ParticipantsPages /> } />
+            <Route path="/participant/:id" element={<ParticipantPage />} />
+            <Route path="*" element={<NotFound />} />
         </Routes>
     );
 }

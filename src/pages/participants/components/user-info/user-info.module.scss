@@ -1,0 +1,17 @@
+.infoContainer {
+  display: flex;
+}
+
+.aboutMeContainer {
+  width: 50%;
+  margin-left: 500px;
+}
+
+.progressBarContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin-right: 0px;
+  align-items: center;
+}
