@@ -17,7 +17,7 @@
   height: 20px;
   margin: 0;
   position: relative;
-  width: 30px;
+  width: 50px;
 }
 
 .checkbox-wrapper-2 .ikxBAC::before {
@@ -60,7 +60,7 @@
 
 .checkbox-wrapper-2 .ikxBAC:checked::after {
   background-color: #fff;
-  left: 13px;
+  left: 33px;
 }
 
 .checkbox-wrapper-2 :focus:not(.focus-visible) {
