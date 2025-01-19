@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./user-info.module.scss";
-import { ProgressBar } from "../../../../shared/ui";
+import {ProgressBar} from "../../../../components/ui";
+
 
 const progressData = [
   {
