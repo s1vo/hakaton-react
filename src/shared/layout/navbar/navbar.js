@@ -10,8 +10,8 @@ export const Navbar = () => {
         <Link to="/">
           <img src={logo} alt="Логотип" width="45" height="45" />
         </Link>
-        <Link to="/">
-          <span className="navbar-logo-text">Хакатон React</span>
+        <Link to="/" style={{textDecoration: 'none'}}>
+          <span className="navbar-logo-text" >Хакатон React</span>
         </Link>
       </div>
       <ul className="navbar-links">
@@ -28,11 +28,6 @@ export const Navbar = () => {
         <li>
           <NavLink className="navbar-link" to="/favourites" activeClassName="active">
             Избранное
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className="navbar-link" to="/contacts" activeClassName="active">
-            Контакты
           </NavLink>
         </li>
       </ul>

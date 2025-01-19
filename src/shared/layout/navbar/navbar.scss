@@ -1,6 +1,5 @@
 /* Стили для контейнера навбара */
 .navbar {
-
   top: 0;
   left: 0;
   width: 100%; /* Растягиваем шапку на всю ширину */
@@ -10,6 +9,7 @@
   background-color: #1e293b;
   padding: 0.5rem 1rem;
   z-index: 1000; /* Чтобы шапка была поверх всего контента */
+
 }
 
 /* Логотип */
@@ -24,6 +24,7 @@
   font-size: 1.6rem;
   color: #eaeaea; /* Темный текст */
   font-weight: bold;
+
 }
 
 /* Список ссылок */
@@ -39,7 +40,7 @@
   position: relative;
   text-decoration: none;
   color: #eaeaea;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
   transition: color 0.3s;
 }

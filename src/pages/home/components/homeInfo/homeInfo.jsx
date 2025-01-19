@@ -1,15 +1,14 @@
 import React from 'react';
 import {InfoCard} from "./components/infoCard/infoCard";
-
-import './homeInfo.scss'
 import {Expandable} from "../../../../shared/ui";
 
+import './homeInfo.scss'
 
 export const HomeInfo = () => {
     return (
         <section className="home-info">
             <h2>О нашей команде</h2>
-            <p>
+            <p >
                 <strong>Наша команда</strong> объединяет <span className="highlight">профессионалов</span> из разных
                 областей, включая
                  <em> разработку</em>, <em>дизайн</em> и <em>аналитику</em>. Мы работаем вместе, чтобы создавать

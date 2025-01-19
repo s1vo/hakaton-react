@@ -41,7 +41,7 @@ export const UserInfo = () => {
     if (!user) {
         return (
             <div className={styles.infoContainer}>
-                <p style={{ fontSize: "1.6em", fontWeight: "700", color: "red" }}>
+                <p style={{ fontSize: "1.2em", fontWeight: "700", color: "red" }}>
                     Пользователь с ID {id} не найден.
                 </p>
             </div>
@@ -58,7 +58,7 @@ export const UserInfo = () => {
                 <div className={styles.userImageContainer}>
                     <div className="userInfo">
                         <img src={user.photo} alt={user.name} />
-                        <div style={{ fontSize: "1.6em", fontWeight: "800" }}>{user.name}</div>
+                        <div style={{ fontSize: "1.2em", fontWeight: "800" }}>{user.name}</div>
                         <div>Возраст: {user.age}</div>
                     </div>
                     <div
@@ -66,7 +66,7 @@ export const UserInfo = () => {
                         style={{
                             display: "flex",
                             justifyContent: "space-between",
-                            width: "60%",
+                            width: "80%",
                         }}
                     >
                         <Badge colorClass="badge-primary">ВКонтакте</Badge>
@@ -76,7 +76,7 @@ export const UserInfo = () => {
                 </div>
                 <div className={styles.detailsContainer}>
                     <div className="section">
-                        <h1 style={{ fontSize: "2em", fontWeight: "800" }}>Задачи на проекте</h1>
+                        <h1 style={{ fontSize: "1.3em", fontWeight: "800" }}>Задачи на проекте</h1>
                         <ul>
                             {user.tasks?.length > 0 ? (
                                 user.tasks.map((task, index) => (
@@ -85,17 +85,17 @@ export const UserInfo = () => {
                                     </li>
                                 ))
                             ) : (
-                                <li style={{ fontSize: "1.4em", color: "gray" }}>Нет задач.</li>
+                                <li style={{ fontSize: "1em", color: "gray" }}>Нет задач.</li>
                             )}
                         </ul>
                     </div>
 
                     <div className="section">
-                        <h1 style={{ fontSize: "2em", fontWeight: "800" }}>О себе</h1>
-                        <p style={{ fontSize: "1.4em" }}>{user.description}</p>
+                        <h1 style={{ fontSize: "1.3em", fontWeight: "800" }}>О себе</h1>
+                        <p style={{ fontSize: "1m" }}>{user.description}</p>
                     </div>
                     <div className="section">
-                        <h1 style={{ fontSize: "2em", fontWeight: "800" }}>Уровень навыков</h1>
+                        <h1 style={{ fontSize: "1.3m", fontWeight: "800" }}>Уровень навыков</h1>
                         <ProgressBarContainer type="line" props={progressData} />
                     </div>
                 </div>
