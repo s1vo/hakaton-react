@@ -24,23 +24,31 @@ const progressData = [
 
 export const UserInfo = () => {
   const [isFavourite, setIsFavourite] = useState(false);
-  const [favouriteItems, setFavouriteItems] = useState({});
+  const [favouriteItems, setFavouriteItems] = useState([]);
   const { id } = useParams();
   const onFavouriteClick = () => {
-    if (!favouriteItems) {
-      localStorage.setItem("favouriteItems", JSON.stringify({ [id]: !isFavourite }));
+    let newItems = [];
+    if (isFavourite) {
+      const filteredItems = favouriteItems.filter((itemID) => itemID !== id);
+      if (filteredItems.length === 0) {
+        localStorage.removeItem("favouriteItems");
+      } else {
+        newItems = filteredItems;
+        localStorage.setItem("favouriteItems", JSON.stringify(newItems));
+      }
     } else {
-      localStorage.setItem("favouriteItems", JSON.stringify({ ...favouriteItems, [id]: !isFavourite }));
+      newItems = [...favouriteItems, id];
+      localStorage.setItem("favouriteItems", JSON.stringify(newItems));
     }
-
+    setFavouriteItems(newItems);
     setIsFavourite((prevState) => !prevState);
   };
   useEffect(() => {
-    let items = localStorage.getItem("favouriteItems");
-    if (!items) return;
-    items = JSON.parse(items);
-    setFavouriteItems(items);
-    setIsFavourite(items[id]);
+    let itemIds = localStorage.getItem("favouriteItems");
+    if (!itemIds) return;
+    itemIds = JSON.parse(itemIds);
+    setFavouriteItems(itemIds);
+    setIsFavourite(!!itemIds.find((itemID) => itemID === id));
   }, []);
   return (
     <div className={styles.infoContainer}>
