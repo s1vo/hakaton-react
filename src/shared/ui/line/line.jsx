@@ -1,4 +1,5 @@
 import "./line.scss";
+
 export const Line = ({ title, color, value }) => (
     <div className="line">
         <h1 className="line__title">{title}</h1>
