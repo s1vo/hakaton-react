@@ -2,6 +2,7 @@ import React from "react";
 import "./teamCard.css";
 import { useNavigate } from "react-router-dom";
 import { teamMembers } from "../../../DB/members";
+import { Button } from "../../../shared/ui";
 
 export const TeamCard = () => {
   const navigate = useNavigate();
@@ -16,12 +17,12 @@ export const TeamCard = () => {
             <h3 className="team-name">{member.name}</h3>
             <p className="team-role">{member.role}</p>
             <p className="team-description">{member.description}</p>
-            <button
-              className="team-button"
-              onClick={() => navigate(`/participant/${member.id}`)}
-            >
-              Подробнее
-            </button>
+            <Button
+              color="#2563eb"
+              func={() => navigate(`/participant/${member.id}`)}
+              title="Подробнее"
+              type="circle"
+            />
           </div>
         ))}
       </div>
